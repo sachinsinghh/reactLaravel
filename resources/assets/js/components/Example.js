@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Sachins from './Sachin';
+import Person from './Person/Person';
 
 export default class Example extends Component {
     render() {
@@ -12,8 +13,10 @@ export default class Example extends Component {
                             <div className="card-header">Example Component</div>
 
                             <div className="card-body">
+                            <Person />
                                 I'm an example component!
                             </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -23,5 +26,5 @@ export default class Example extends Component {
 }
 
 if (document.getElementById('example')) {
-    ReactDOM.render(<Sachins />, document.getElementById('example'));
+    ReactDOM.render(<Example />, document.getElementById('example'));
 }
