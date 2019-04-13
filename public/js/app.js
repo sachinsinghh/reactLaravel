@@ -14212,8 +14212,6 @@ module.exports = __webpack_require__(50);
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -14234,8 +14232,6 @@ __webpack_require__(39);
 /***/ }),
 /* 15 */
 /***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 
 
 window._ = __webpack_require__(16);
@@ -36958,34 +36954,17 @@ module.exports = function spread(callback) {
 
 /***/ }),
 /* 39 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Sachin__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Person_Person__ = __webpack_require__(49);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(42);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _Sachin = __webpack_require__(48);
-
-var _Sachin2 = _interopRequireDefault(_Sachin);
-
-var _Person = __webpack_require__(49);
-
-var _Person2 = _interopRequireDefault(_Person);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -36993,19 +36972,28 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+
+
+
+
+
 var Example = function (_Component) {
     _inherits(Example, _Component);
 
     function Example() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
         _classCallCheck(this, Example);
 
-        var _this = _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).call(this));
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
 
-        _this.state = {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Example.__proto__ || Object.getPrototypeOf(Example)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             persons: [{ name: 'sachin as', age: 28 }, { name: 'rahul as', age: 26 }]
-        };
-        _this.switchNameHandler = _this.switchNameHandler.bind(_this);
-        return _this;
+        }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(Example, [{
@@ -37029,30 +37017,30 @@ var Example = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            return _react2.default.createElement(
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'container' },
-                _react2.default.createElement(
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
                     { className: 'row justify-content-center' },
-                    _react2.default.createElement(
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'col-md-8' },
-                        _react2.default.createElement(
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'div',
                             { className: 'card' },
-                            _react2.default.createElement(
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'div',
                                 { className: 'card-header' },
                                 'Example Component'
                             ),
-                            _react2.default.createElement(
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'div',
                                 { className: 'card-body' },
-                                _react2.default.createElement(_Person2.default, { name: this.state.persons[0].name }),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Person_Person__["a" /* default */], { name: this.state.persons[0].name }),
                                 'I\'m an example component!',
-                                _react2.default.createElement(_Person2.default, { name: this.state.persons[1].name }),
-                                _react2.default.createElement(
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Person_Person__["a" /* default */], { name: this.state.persons[1].name }),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'button',
                                     { onClick: this.switchNameHandler },
                                     'Switch Name'
@@ -37066,13 +37054,13 @@ var Example = function (_Component) {
     }]);
 
     return Example;
-}(_react.Component);
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-exports.default = Example;
+/* harmony default export */ __webpack_exports__["default"] = (Example);
 
 
 if (document.getElementById('example')) {
-    _reactDom2.default.render(_react2.default.createElement(Example, null), document.getElementById('example'));
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Example, null), document.getElementById('example'));
 }
 
 /***/ }),
@@ -61499,28 +61487,20 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 
 /***/ }),
 /* 48 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
 
 var Sachin = function (_Component) {
     _inherits(Sachin, _Component);
@@ -61534,10 +61514,10 @@ var Sachin = function (_Component) {
     _createClass(Sachin, [{
         key: "render",
         value: function render() {
-            return _react2.default.createElement(
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
                 { className: "sddddachin" },
-                _react2.default.createElement(
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "h1",
                     null,
                     "My name is Sachin Singh"
@@ -61547,29 +61527,21 @@ var Sachin = function (_Component) {
     }]);
 
     return Sachin;
-}(_react.Component);
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-exports.default = Sachin;
+/* unused harmony default export */ var _unused_webpack_default_export = (Sachin);
 
 /***/ }),
 /* 49 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var person = function person(props) {
-    return _react2.default.createElement(
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'p',
         null,
         'I\'m a ',
@@ -61578,7 +61550,7 @@ var person = function person(props) {
     );
 };
 
-exports.default = person;
+/* harmony default export */ __webpack_exports__["a"] = (person);
 
 /***/ }),
 /* 50 */
