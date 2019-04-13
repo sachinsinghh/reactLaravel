@@ -5,16 +5,13 @@ import Person from './Person/Person';
 
 export default class Example extends Component {
 
-    constructor() {
-        super();
-        this.state= {
+  
+     state= {
             persons: [
             {name: 'sachin as',age: 28},
             {name: 'rahul as',age: 26}
             ]     
     }
-    this.switchNameHandler = this.switchNameHandler.bind(this);
-}
 
 componentDidMount() {
     console.log('did mount'); // Prints 'bar'
@@ -24,7 +21,7 @@ componentWillMount() {
 }
 switchNameHandler() {
     console.log('was clicked');
-    this.setState({
+ this.setState({
         persons: [
             {name: 'Ram',age: 28},
             {name: 'Raj',age: 26}
