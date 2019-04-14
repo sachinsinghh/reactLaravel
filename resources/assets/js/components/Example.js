@@ -57,5 +57,5 @@ switchNameHandler=() => {
 }
 
 if (document.getElementById('example')) {
-    ReactDOM.render(<Example />, document.getElementById('example'));
+    ReactDOM.render(<Sachin />, document.getElementById('example'));
 }
