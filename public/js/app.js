@@ -36993,10 +36993,15 @@ var Example = function (_Component) {
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Example.__proto__ || Object.getPrototypeOf(Example)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             persons: [{ name: 'sachin as', age: 28 }, { name: 'rahul as', age: 26 }]
-        }, _this.switchNameHandler = function () {
+        }, _this.switchNameHandler = function (nameCheck) {
             console.log('was clic done');
             _this.setState({
-                persons: [{ name: 'Ram', age: 28 }, { name: 'Raj', age: 26 }]
+                persons: [{ name: nameCheck, age: 28 }, { name: 'Raj', age: 26 }]
+            });
+        }, _this.changTheName = function (event) {
+            console.log('inside change the name');
+            _this.setState({
+                persons: [{ name: 'sachin', age: 28 }, { name: event.target.value, age: 26 }]
             });
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
@@ -37014,6 +37019,8 @@ var Example = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'container' },
@@ -37034,12 +37041,13 @@ var Example = function (_Component) {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'div',
                                 { className: 'card-body' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Person_Person__["a" /* default */], { name: this.state.persons[0].name }),
-                                'I\'m an example component!',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Person_Person__["a" /* default */], { name: this.state.persons[1].name }),
+                                'I\'m an example  saccomponent!',
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Person_Person__["a" /* default */], { changed: this.changTheName, name: this.state.persons[1].name }),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'button',
-                                    { onClick: this.switchNameHandler },
+                                    { onClick: function onClick() {
+                                            return _this2.switchNameHandler('sachin done this time');
+                                        } },
                                     'Switch Name'
                                 )
                             )
@@ -37057,7 +37065,7 @@ var Example = function (_Component) {
 
 
 if (document.getElementById('example')) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Sachin__["a" /* default */], null), document.getElementById('example'));
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Example, null), document.getElementById('example'));
 }
 
 /***/ }),
@@ -61514,13 +61522,13 @@ var Sachin = function Sachin(props) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'h1',
             null,
-            'My name is Sachin Singh sa'
+            'My name is Sachin Singh sachin'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button', { onClick: switchN })
     );
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (Sachin);
+/* unused harmony default export */ var _unused_webpack_default_export = (Sachin);
 
 /***/ }),
 /* 49 */
@@ -61533,11 +61541,12 @@ var Sachin = function Sachin(props) {
 
 var person = function person(props) {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'p',
+        "p",
         null,
-        'I\'m a ',
+        "I'm a ",
         props.name,
-        '!'
+        "!",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", onChange: props.changed, value: props.name })
     );
 };
 

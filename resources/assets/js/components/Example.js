@@ -19,14 +19,24 @@ componentDidMount() {
 componentWillMount() {
     console.log('will');
 }
-switchNameHandler=() => {
+switchNameHandler=(nameCheck) => {
     console.log('was clic done');
     this.setState({
         persons: [
-            {name: 'Ram',age: 28},
+            {name: nameCheck,age: 28},
             {name: 'Raj',age: 26}
             ]    
     });
+}
+changTheName =(event) => {
+    console.log('inside change the name');
+    this.setState({
+        persons: [
+            {name: 'sachin',age: 28},
+            {name: event.target.value,age: 26}
+            ]    
+    });
+
 }
 
 
@@ -42,10 +52,10 @@ switchNameHandler=() => {
                             <div className="card-header">Example Component</div>
 
                             <div className="card-body">
-                            <Person name={this.state.persons[0].name} />
-                                I'm an example component!
-                                <Person name={this.state.persons[1].name} />
-                            <button onClick={this.switchNameHandler}>Switch Name</button>
+                         
+                                I'm an example  saccomponent!
+                                <Person changed={this.changTheName} name={this.state.persons[1].name} />
+                            <button onClick={()=>this.switchNameHandler('sachin done this time')}>Switch Name</button>
                             </div>
                            
                         </div>
@@ -57,5 +67,5 @@ switchNameHandler=() => {
 }
 
 if (document.getElementById('example')) {
-    ReactDOM.render(<Sachin />, document.getElementById('example'));
+    ReactDOM.render(<Example />, document.getElementById('example'));
 }

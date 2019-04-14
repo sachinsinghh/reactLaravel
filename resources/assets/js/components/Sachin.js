@@ -18,7 +18,7 @@ console.log('inside switch');
 
         return (
             <div className="sddddachin">
-            <h1>My name is Sachin Singh sa</h1>
+            <h1>My name is Sachin Singh sachin</h1>
             <button onClick={switchN}></button>
             </div>
         );
