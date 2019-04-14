@@ -14,13 +14,13 @@ export default class Example extends Component {
   
 
 componentDidMount() {
-    console.log('did mount'); // Prints 'bar'
+    console.log('did mount'); 
 }
 componentWillMount() {
-    console.log('will'); // Prints 'bar'
+    console.log('will');
 }
-switchNameHandler() {
-    console.log('was clicked');
+switchNameHandler=() => {
+    console.log('was clic done');
     this.setState({
         persons: [
             {name: 'Ram',age: 28},

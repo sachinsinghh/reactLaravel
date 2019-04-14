@@ -36993,26 +36993,23 @@ var Example = function (_Component) {
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Example.__proto__ || Object.getPrototypeOf(Example)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             persons: [{ name: 'sachin as', age: 28 }, { name: 'rahul as', age: 26 }]
+        }, _this.switchNameHandler = function () {
+            console.log('was clic done');
+            _this.setState({
+                persons: [{ name: 'Ram', age: 28 }, { name: 'Raj', age: 26 }]
+            });
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(Example, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            console.log('did mount'); // Prints 'bar'
+            console.log('did mount');
         }
     }, {
         key: 'componentWillMount',
         value: function componentWillMount() {
-            console.log('will'); // Prints 'bar'
-        }
-    }, {
-        key: 'switchNameHandler',
-        value: function switchNameHandler() {
-            console.log('was clicked');
-            this.setState({
-                persons: [{ name: 'Ram', age: 28 }, { name: 'Raj', age: 26 }]
-            });
+            console.log('will');
         }
     }, {
         key: 'render',
