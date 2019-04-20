@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Sachin from './Sachin';
 import Person from './Person/Person';
+import './Person/Person.css';
 
 export default class Example extends Component {
 
@@ -44,6 +45,13 @@ changTheName =(event) => {
 
     
     render() {
+        const style = {
+            backgroundColor: 'white',
+            font: 'inherit',
+            border: '1px solid blue',
+            padding: '8px',
+            cursor: 'pointer'
+        };
         return (
             <div className="container">
                 <div className="row justify-content-center">
@@ -53,9 +61,9 @@ changTheName =(event) => {
 
                             <div className="card-body">
                          
-                                I'm an example  saccomponent!
+                                I'm an example sachin component!
                                 <Person changed={this.changTheName} name={this.state.persons[1].name} />
-                            <button onClick={()=>this.switchNameHandler('sachin done this time')}>Switch Name</button>
+                            <button style={style} onClick={()=>this.switchNameHandler('sachin done this time')}>Switch Name</button>
                             </div>
                            
                         </div>

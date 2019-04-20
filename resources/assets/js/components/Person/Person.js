@@ -1,10 +1,11 @@
 import React from 'react';
+import './Person.css';
 
 const person = (props) => {
-    return <p>I'm a {props.name}!
+    return (<div className="Person"><p>I'm a {props.name}!
     <input type="text" onChange={props.changed} value={props.name} />
     
-    </p>
+    </p></div>)
 };
 
 export default person;
